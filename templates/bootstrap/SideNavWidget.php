@@ -9,8 +9,8 @@ namespace yii\apidoc\templates\bootstrap;
 
 use Yii;
 use yii\base\InvalidConfigException;
-use yii\bootstrap\BootstrapAsset;
-use yii\bootstrap\Widget;
+use yii\bootstrap4\BootstrapAsset;
+use yii\bootstrap4\Widget;
 use yii\helpers\ArrayHelper;
 use yii\helpers\Url;
 use yii\helpers\Html;
