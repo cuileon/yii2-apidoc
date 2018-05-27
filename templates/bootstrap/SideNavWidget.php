@@ -9,8 +9,8 @@ namespace yii\apidoc\templates\bootstrap;
 
 use Yii;
 use yii\base\InvalidConfigException;
-use yii\bootstrap\BootstrapAsset;
-use yii\bootstrap\Widget;
+use yii\bootstrap4\BootstrapAsset;
+use yii\bootstrap4\Widget;
 use yii\helpers\ArrayHelper;
 use yii\helpers\Url;
 use yii\helpers\Html;
@@ -147,11 +147,11 @@ class SideNavWidget extends Widget
         }
 
         if ($items !== null) {
+            Html::addCssClass($linkOptions, 'dropdown-toggle');
             $linkOptions['data-toggle'] = 'collapse';
             $linkOptions['data-parent'] = '#' . $this->id;
             $id = $this->id . '-' . static::$counter++;
             $url = '#' . $id;
-            $label .= ' ' . Html::tag('b', '', ['class' => 'caret']);
             if (is_array($items)) {
                 if ($active === false) {
                     foreach ($items as $subItem) {
@@ -166,7 +166,7 @@ class SideNavWidget extends Widget
                     'encodeLabels' => $this->encodeLabels,
                     'view' => $this->getView(),
                     'options' => [
-                        'class' => "submenu panel-collapse collapse" . ($active || !$collapsed ? ' in' : '')
+                        'class' => "submenu collapse" . ($active || !$collapsed ? ' in show' : '')
                     ]
                 ]);
             }
