@@ -22,7 +22,7 @@
         "php": ">=5.4",
         "yiisoft/yii2": "~2.0.13",
         "yiisoft/yii2-bootstrap4": "*",
-        "phpdocumentor/reflection": "^3.0.1",
+        "phpdocumentor/reflection": "4.0.0-alpha5",
         "phpdocumentor/reflection-docblock": "^2.0.4",
         "nikic/php-parser": "^1.0",
         "cebe/js-search": "~0.9.3",
